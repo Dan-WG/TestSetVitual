@@ -14,11 +14,18 @@ public class SpawnARObject : MonoBehaviour
 
     [SerializeField] private GameObject PlaceablePrefab;
 
+    //AR Session
+    public ARSession Session;
+
+    //AR Plane Manager
+    private ARPlaneManager planeManager;
+
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit> ();
 
     private void Awake()
     {
         raycastManager = GetComponent<ARRaycastManager>();
+        planeManager = GetComponent<ARPlaneManager>();
     }
 
     private void Update()
@@ -35,12 +42,19 @@ public class SpawnARObject : MonoBehaviour
             if (spawnedObject == null)
             {
                 spawnedObject = Instantiate(PlaceablePrefab, hitPos.position, hitPos.rotation);
+                spawnedObject.transform.rotation = Quaternion.Euler(-90f, 0, 0);
+                
             }
             else
             {
-                spawnedObject.transform.position = hitPos.position;
-                spawnedObject.transform.rotation = hitPos.rotation;
+                this.gameObject.GetComponent<ARPlaneManager>().enabled = false;
+
+                foreach (ARPlane plane in planeManager.trackables)
+                {
+                    plane.gameObject.SetActive(false);
+                }
             }
+            
 
         }
     }
@@ -55,5 +69,17 @@ public class SpawnARObject : MonoBehaviour
 
         TouchPos = default;
         return false;
+    }
+
+    //buttons
+
+    public void ResetSession()
+    {
+        if (spawnedObject != null)
+        {
+            Destroy(spawnedObject);
+            this.gameObject.GetComponent<ARPlaneManager>().enabled = true;
+        }
+        Session.Reset();
     }
 }
