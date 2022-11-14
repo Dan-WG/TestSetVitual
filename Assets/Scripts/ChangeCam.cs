@@ -19,14 +19,14 @@ public class ChangeCam : MonoBehaviour
                 Debug.Log("FPS is main");
                 FreeCam = Camera.main;
                 //FreeCam.gameObject.GetComponent<FreeCam>().enabled = true;
-                FPSControl.gameObject.SetActive(false);
+                //FPSControl.gameObject.SetActive(false);
             }
             else
             {
                 FPSCam = Camera.main;
                 //FreeCam.gameObject.GetComponent<FreeCam>().enabled = false;
 
-                FPSControl.gameObject.SetActive(true);
+                //FPSControl.gameObject.SetActive(true);
             }
         }
     }

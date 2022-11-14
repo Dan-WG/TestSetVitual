@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_RootOrder
@@ -532,7 +532,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
@@ -795,6 +795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345094245}
+  - component: {fileID: 1345094246}
   m_Layer: 0
   m_Name: BrazoCam
   m_TagString: Untagged
@@ -818,6 +819,21 @@ Transform:
   m_Father: {fileID: 1661265511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1345094246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345094244}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbdc14cceddd86c46bb054a75e77bc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pieza2: {fileID: 8588187729905425302}
+  pieza3: {fileID: 2559979949852892595}
+  speed: 5
 --- !u!1 &1490392494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,6 +1269,7 @@ GameObject:
   - component: {fileID: 1667277511}
   - component: {fileID: 1667277510}
   - component: {fileID: 1667277515}
+  - component: {fileID: 1667277516}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1300,7 +1317,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667277507}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -1412,6 +1429,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+--- !u!114 &1667277516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667277507}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbdc14cceddd86c46bb054a75e77bc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pieza2: {fileID: 8588187729905425302}
+  pieza3: {fileID: 2559979949852892595}
+  speed: 5
 --- !u!1 &1751328044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,8 +1589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3564e2e996ddb148809200ce76f8e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cam1GO: {fileID: 1345094244}
-  camera1: {fileID: 0}
+  Cam1GO: {fileID: 1667277507}
+  camera1: {fileID: 267494975}
   FPSControl: {fileID: 1658828280}
   FPSCam: {fileID: 267494975}
 --- !u!4 &1991967304
@@ -1589,7 +1621,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6715614043788992660}
-  - {fileID: 6668665129623726196}
   m_Father: {fileID: 1345094245}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
@@ -1666,7 +1697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2559979949852892595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1715,14 +1746,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8588187729905425302}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.05, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3386779289744420105}
-  m_Father: {fileID: 469125959804558670}
-  m_RootOrder: 1
+  m_Father: {fileID: 6715614043788992660}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6715614043788992660
 Transform:
@@ -1735,7 +1766,8 @@ Transform:
   m_LocalPosition: {x: -0, y: -0.014375687, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6668665129623726196}
   m_Father: {fileID: 469125959804558670}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

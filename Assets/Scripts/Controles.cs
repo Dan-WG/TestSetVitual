@@ -36,15 +36,24 @@ public class Controles : MonoBehaviour
                 active1 = true;
                 Cam1GO.gameObject.GetComponent<CameraController>().enabled = true;
                 camera1 = Camera.main;
-                FPSControl.gameObject.SetActive(false);
+                Cam1GO.GetComponent<Camera>().enabled = true;
+                Cam1GO.GetComponent<BajarRiel>().enabled = true;
+                FPSControl.GetComponentInChildren<Camera>().enabled = false;
+                FPSControl.GetComponent<FirstPersonController>().enabled = false;
+                //FPSControl.gameObject.SetActive(false);
                 //anim1.SetBool("Active", active1);
             }
             else 
             {
+
                 Cam1GO.gameObject.GetComponent<CameraController>().enabled = false;
                 active1 = false;
                 FPSCam = Camera.main;
-                FPSControl.gameObject.SetActive(true);
+                Cam1GO.GetComponent<Camera>().enabled = false;
+                Cam1GO.GetComponent<BajarRiel>().enabled = false;
+                FPSControl.GetComponentInChildren<Camera>().enabled = true;
+                FPSControl.GetComponent<FirstPersonController>().enabled = true;
+                //FPSControl.gameObject.SetActive(true);
                 //anim1.SetBool("Active", active1);
             }
 
