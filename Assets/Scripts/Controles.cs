@@ -7,9 +7,9 @@ using UnityStandardAssets.Utility;
 public class Controles : MonoBehaviour
 {
 
-    public GameObject Cam1GO;
+    public GameObject Cam1GO, UILuz, GoLuz;
     //Animator anim1;
-    private bool active1;
+    private bool active1, active2;
     public Camera camera1;
     public GameObject FPSControl;
     public Camera FPSCam;
@@ -58,6 +58,34 @@ public class Controles : MonoBehaviour
             }
 
         }
-        
+        if (Input.GetKeyDown(KeyCode.Keypad2))
+        {
+            if (!active2)
+            {
+                active2 = true;
+                UILuz.SetActive(true);
+
+                GoLuz.GetComponent<BajarRiel>().enabled = true;
+                FPSControl.GetComponent<FirstPersonController>().enabled = false;
+                //FPSControl.gameObject.SetActive(false);
+                //anim1.SetBool("Active", active1);
+            }
+            else
+            {
+
+                
+                active2 = false;
+                UILuz.SetActive(false);
+                GoLuz.GetComponent<BajarRiel>().enabled = false;
+                
+               
+           
+                FPSControl.GetComponent<FirstPersonController>().enabled = true;
+                //FPSControl.gameObject.SetActive(true);
+                //anim1.SetBool("Active", active1);
+            }
+
+        }
+
     }
 }
