@@ -19,12 +19,12 @@ public class ControlRiel : MonoBehaviour
     void Update()
     {
         CheckPos();
-        VelocidadFija();
+        //VelocidadFija();
         
-        if (Input.GetKey(KeyCode.P) && PosZ <= 44f)
+        if (Input.GetKey(KeyCode.LeftArrow) && PosZ <= 44f)
         {
             PosZ += speed * Time.deltaTime;
-        }else if(Input.GetKey(KeyCode.O) && PosZ >= 3f)
+        }else if(Input.GetKey(KeyCode.RightArrow) && PosZ >= 3f)
         {
             PosZ -= speed * Time.deltaTime;
         }

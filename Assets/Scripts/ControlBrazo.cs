@@ -18,13 +18,13 @@ public class ControlBrazo : MonoBehaviour
     void Update()
     {
         CheckPos();
-        VelocidadFija();
+        //VelocidadFija();
 
-        if (Input.GetKey(KeyCode.L) && PosX <= 29f)
+        if (Input.GetKey(KeyCode.UpArrow) && PosX <= 29f)
         {
             PosX += speed * Time.deltaTime;
         }
-        else if (Input.GetKey(KeyCode.K) && PosX >= 4f)
+        else if (Input.GetKey(KeyCode.DownArrow) && PosX >= 4f)
         {
             PosX -= speed * Time.deltaTime;
         }
