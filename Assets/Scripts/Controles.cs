@@ -44,6 +44,8 @@ public class Controles : MonoBehaviour
                 RootCamara.GetComponent<ControlRiel>().enabled = true;
                 RootCamara.GetComponentInChildren<ControlBrazo>().enabled = true;
                 RootLuz.GetComponent<ControlRiel>().enabled = false;
+                RootLuz.GetComponentInChildren<CameraController>().enabled = false;
+                RootLuz.GetComponentInChildren<BajarRiel>().enabled = false;
                 RootLuz.GetComponentInChildren<ControlBrazo>().enabled = false;
                 FPSControl.GetComponentInChildren<Camera>().enabled = false;
                 FPSControl.GetComponent<FirstPersonController>().enabled = false;
@@ -85,7 +87,8 @@ public class Controles : MonoBehaviour
                 //FPSControl.GetComponentInChildren<Camera>().enabled = false;
                 FPSControl.GetComponent<FirstPersonController>().enabled = false;
 
-                RootCamara.GetComponent<ControlRiel>().enabled = false;
+                RootCamara.GetComponentInChildren<CameraController>().enabled = false;
+                RootCamara.GetComponentInChildren<BajarRiel>().enabled = false;
                 RootCamara.GetComponentInChildren<ControlBrazo>().enabled = false;
                 //FPSControl.gameObject.SetActive(false);
                 //anim1.SetBool("Active", active1);

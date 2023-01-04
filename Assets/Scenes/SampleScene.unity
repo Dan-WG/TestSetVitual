@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 13152219}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BrazoCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 431334070}
   - component: {fileID: 431334072}
   - component: {fileID: 431334071}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1058,7 +1058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760833375}
   - component: {fileID: 760833376}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1652,7 +1652,7 @@ GameObject:
   - component: {fileID: 1010672114}
   - component: {fileID: 1010672113}
   - component: {fileID: 1010672112}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1908,7 +1908,7 @@ GameObject:
   - component: {fileID: 1213612733}
   - component: {fileID: 1213612735}
   - component: {fileID: 1213612734}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BrazoCamAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2047,7 +2047,7 @@ GameObject:
   - component: {fileID: 1321259727}
   - component: {fileID: 1321259729}
   - component: {fileID: 1321259728}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2233,7 +2233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345094245}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BrazoCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2586,7 +2586,7 @@ GameObject:
   - component: {fileID: 1661265513}
   - component: {fileID: 1661265512}
   - component: {fileID: 1661265515}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Movimiento
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2704,7 +2704,7 @@ GameObject:
   - component: {fileID: 1667277510}
   - component: {fileID: 1667277515}
   - component: {fileID: 1667277516}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3763,7 +3763,7 @@ GameObject:
   - component: {fileID: 2101954646}
   - component: {fileID: 2101954645}
   - component: {fileID: 2101954644}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: MovimientoLuz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3876,7 +3876,7 @@ GameObject:
   - component: {fileID: 2141211531}
   - component: {fileID: 2141211533}
   - component: {fileID: 2141211532}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3976,7 +3976,7 @@ GameObject:
   - component: {fileID: 469125959804558670}
   - component: {fileID: 993460706405828599}
   - component: {fileID: 993460706405828600}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BrazoCamAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4023,7 +4023,7 @@ GameObject:
   - component: {fileID: 3386779289744420105}
   - component: {fileID: 9129541898624321118}
   - component: {fileID: 7857971842714773086}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4057,7 +4057,7 @@ GameObject:
   - component: {fileID: 6715614043788992660}
   - component: {fileID: 5435984926016504544}
   - component: {fileID: 7132445431988767866}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4249,7 +4249,7 @@ GameObject:
   - component: {fileID: 6668665129623726196}
   - component: {fileID: 4039606434153933492}
   - component: {fileID: 7145508021800473119}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
