@@ -38,14 +38,14 @@ public class RielesController : MonoBehaviour
 
     void Update()
     {
-        temp = rielTras1.transform.position;
+        temp = rielTras1.transform.localPosition;
        
-        if (onPointerDown1 && (temp.z < 44f))
+        if (onPointerDown1 && (temp.z < 0))
         {
             rielTras1.transform.position += new Vector3(0, 0, speed * Time.deltaTime);
         }
 
-        if(onPointerDown2 && (temp.z > -10f))
+        if(onPointerDown2 && (temp.z > -54f))
         {
             rielTras1.transform.position -= new Vector3(0, 0, speed * Time.deltaTime);
         }

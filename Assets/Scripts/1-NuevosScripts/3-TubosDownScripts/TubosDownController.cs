@@ -43,17 +43,17 @@ public class TubosDownController : MonoBehaviour
 
         if (tuboRetDown1)
         {
-            if (temp.y < 5f)
-                tuboRetract1.transform.localPosition += new Vector3(0, speed * Time.deltaTime, 0);
+            if (temp.y > -1.5f)
+                tuboRetract1.transform.localPosition -= new Vector3(0, speed * Time.deltaTime, 0);
             else
                 tubo1Total = true;
             
             if (tubo1Total) 
             {
-                if (temp2.y < 4f)
+                if (temp2.y > -1.4f)
                 {
                     tubo2Total = false;
-                    tuboRetract2.transform.localPosition += new Vector3(0, speed * Time.deltaTime, 0);
+                    tuboRetract2.transform.localPosition -= new Vector3(0, speed * Time.deltaTime, 0);
                 }
                 else
                     tubo2Total = true;
@@ -64,14 +64,14 @@ public class TubosDownController : MonoBehaviour
         {
             if (tubo1Total) 
             {
-                if(temp2.y > 0)
-                    tuboRetract2.transform.localPosition -= new Vector3(0, speed * Time.deltaTime, 0);
+                if(temp2.y < 0)
+                    tuboRetract2.transform.localPosition += new Vector3(0, speed * Time.deltaTime, 0);
                 else 
                     tubo1Total = false;
             }
 
-            if(!tubo1Total && temp.y > 0)
-                tuboRetract1.transform.localPosition -= new Vector3(0, speed * Time.deltaTime, 0);
+            if(!tubo1Total && temp.y < 0)
+                tuboRetract1.transform.localPosition += new Vector3(0, speed * Time.deltaTime, 0);
         }
     }
 }

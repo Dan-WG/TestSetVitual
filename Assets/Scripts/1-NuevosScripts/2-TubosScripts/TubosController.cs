@@ -35,14 +35,14 @@ public class TubosController : MonoBehaviour
 
     void Update()
     {
-        temp = tubo1.transform.position;
+        temp = tubo1.transform.localPosition;
 
-        if (rigthDown1 && (temp.x < 30f))
+        if (rigthDown1 && (temp.x < 13.5f))
         {
             tubo1.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         }
 
-        if (leftDown1 && (temp.x > 4f))
+        if (leftDown1 && (temp.x > 0))
         {
             tubo1.transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
         }
