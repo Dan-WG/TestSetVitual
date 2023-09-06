@@ -1,22 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GeneralController : MonoBehaviour
 {
-    public GameObject rielMov1;
-    public GameObject rielMov2;
+    public GameObject rielMovY, motorMovX, tubosMovZ;
+    public TMP_InputField inputY;
 
-    public void RielMov1()
+    private int x, y, z;
+
+    private int limintY;
+
+    private bool inputYbool = false;
+
+    /*private void Awake()
     {
-        if (Input.GetKey(KeyCode.W) && (rielMov1.transform.position.z <= 12f))
-        {
-            rielMov1.transform.position += new Vector3(0, 0, 1f);
-        }
-        if (Input.GetKey(KeyCode.S) && (rielMov1.transform.position.z >= -41f))
-        {
-            rielMov1.transform.position += new Vector3(0, 0, -1f);
-        }
+        inputX = transform.Find GetComponent<TMP_InputField>();
+    }*/
+    public void InputY()
+    {
+        inputYbool = true;
+        y = Convert.ToInt32(inputY.text);
+        //rielMovY.transform.localPosition = new Vector3(0, 0, y);
+        //Debug.Log(inputY.text);
     }
 
+    private void Update()
+    {
+        if (inputYbool) 
+        {
+            if(limintY < y)
+            rielMovY.transform.localPosition += new Vector3(0, 0, y);
+        }
+    }
 }
