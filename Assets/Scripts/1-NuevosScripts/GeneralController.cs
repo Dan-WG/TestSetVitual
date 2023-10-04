@@ -32,8 +32,9 @@ public class GeneralController : MonoBehaviour
     {
         if (inputYbool) 
         {
-            if(limintY < y)
-            rielMovY.transform.localPosition += new Vector3(0, 0, y);
+            Debug.Log(inputYbool);
+            //if(limintY < y)
+            //rielMovY.transform.localPosition += new Vector3(0, 0, y);
         }
     }
 }
